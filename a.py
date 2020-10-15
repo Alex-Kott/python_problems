@@ -16,7 +16,7 @@ def main():
             winner_score = value
             winner = key
 
-    print(int(winner))
+    print(winner)
 
 
 if __name__ == "__main__":

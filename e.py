@@ -9,7 +9,7 @@ def is_prime(n: int) -> bool:
         raise ValueError('Out range argument')
     if n % 2 == 0:
         return False
-    for i in range(3, ceil(sqrt(n)), 2):
+    for i in range(3, ceil(sqrt(n+1)), 2):
         if n % i == 0:
             return False
     return True
@@ -43,9 +43,10 @@ def main() -> None:
     if not hyperprimes:
         print(0)
 
-    for i in hyperprimes:
+    for i in sorted(hyperprimes):
         print(i, end=" ")
 
 
 if __name__ == "__main__":
+    # n = is_prime(9)
     main()

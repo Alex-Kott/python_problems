@@ -36,22 +36,16 @@ def calc_length(a: Point, b: Point) -> float:
 
 
 def main() -> None:
-    input_data = input("Point A coords (x, y):")
-    x1, y1 = input_data.split(" ")
+    input_data = input("Input coords (x1, y1, x2, y2, x3, y3):")
+    x1, y1, x2, y2, x3, y3 = input_data.split(" ")
     a = Point(x1, y1)
-
-    input_data = input("Point B coords (x, y):")
-    x2, y2 = input_data.split(" ")
     b = Point(x2, y2)
-
-    input_data = input("Point C coords (x, y):")
-    x3, y3 = input_data.split(" ")
     c = Point(x3, y3)
 
     triangle = Triangle(a, b, c)
     triangle_perimeter = triangle.calc_perimeter()
 
-    print("Triangle perimeter: ", triangle_perimeter)
+    print(triangle_perimeter)
 
 
 if __name__ == "__main__":
